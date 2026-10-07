@@ -4,6 +4,17 @@ A pure front-end local media player built with vanilla HTML, CSS, and JavaScript
 It plays audio and video files stored locally, displays synchronized LRC lyrics,
 and uses IndexedDB to persist your library between sessions.
 
+## Screenshots
+
+<p align="center">
+  <img src="screenshots/main.jpg" width="280">
+  <img src="screenshots/menu.jpg" width="280">
+</p>
+
+<p align="center">
+  <em>Main interface · Synchronized lyrics</em>
+</p>
+
 ## Features
 
 - Scan a local folder and import audio / video files
