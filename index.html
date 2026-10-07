@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="light-mode">
+<head>
+	<title>English Listening Player</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="player-card">
+    <div class="menu-header">
+        <button class="menu-toggle" id="menuToggle" aria-label="menu">☰</button>
+    </div>
+
+
+<div class="menu-panel" id="menuPanel">
+       
+        <div class="menu-row">
+            <span class="menu-label">››</span>
+            <select class="menu-select" id="forwardSelect">
+                <option>1</option><option>2</option><option selected>3</option><option>4</option>
+                <option>5</option><option>6</option><option>7</option><option>8</option>
+                <option>9</option><option>10</option><option>15</option><option>20</option>
+                <option>30</option><option>60</option>
+            </select>
+            <span class="menu-label" style="margin-left:2px;">s</span>
+        </div>
+
+
+<div class="menu-row" style="flex-wrap: wrap; gap: 6px;">
+            <button class="menu-btn" id="selectFolderBtn" onclick="selectFolder()">＋ Folder</button>
+            <button class="menu-btn danger" id="clearBtn" onclick="clearAllMusic()">✕ Clear</button>
+            <button class="menu-btn" id="reloadBtn" onclick="reloadFromDB()">⟳ Reload</button>
+            <button class="menu-btn" id="lyricsToggle" onclick="toggleLyrics()">💬 Lyrics</button>
+        </div>
+
+<div class="song-list" id="songList">
+            <div class="empty-state">No songs</div>
+        </div>
+    </div>
+
+
+<div class="giant-skip">
+        <button class="giant-btn" id="backBtn" aria-label="Rewind"  onclick="backward()"><span>‹‹</span></button>
+        <button class="giant-btn" id="forwardBtn" aria-label="Forward" onclick="forward()"><span>››</span></button>
+    </div>
+    <video  id="smPlayer" preload="metadata" playsinline> 
+   <source src="u.mp3" type="audio/mpeg">
+    
+   
+    <source src="u.ogg" type="audio/ogg">
+    
+    
+    <source src="u.wav" type="audio/wav">
+    
+    
+    <source src="u.aac" type="audio/aac">
+  You brower doesn't support mp3
+</video>
+    
+
+    <div class="lyrics-box" id="lyrics"></div>
+  
+<div class="progress-section" >
+        <span class="time-label" id="current_time">0:00</span>
+        <div class="progress-track" id="progressTrack">
+            <div class="progress-fill" id="progress"></div>
+        </div>
+        <span class="time-label" id="durationRest">0:00</span>
+    </div>
+
+
+<div class="player-section" id="playerSection" style="display:none;">
+  <div class="now-playing" id="nowPlaying"></div>
+
+
+<div class="bottom-four">
+        <button class="ctrl-btn" id="prevBtn" onclick="playPrevious()">⏮ </button>
+        <button class="ctrl-btn play-btn" id="playbutton" onclick="play()">⏸</button>
+        <button class="ctrl-btn" id="nextBtn" onclick="playNext()"> ⏭</button>
+        <button class="ctrl-btn loop-btn" id="loop" onclick="loop()">↻</button>
+    </div>
+
+
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
